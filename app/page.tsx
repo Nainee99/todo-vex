@@ -1,5 +1,5 @@
 "use client";
-// import { signInAction } from "@/actions/auth-action";
+import { signInAction } from "@/actions/auth-action";
 import { Button } from "@/components/ui/button";
 import todovexLogo from "@/public/logo/todovex.svg";
 import clsx from "clsx";
@@ -27,7 +27,7 @@ export default function LoginForm() {
             </h1>
           </Link>
           <div className="hidden lg:flex w-fit items-center">
-            <form>
+            <form action={signInAction}>
               <GoogleSignInButton />
             </form>
           </div>
@@ -68,7 +68,7 @@ export default function LoginForm() {
               using AI.
             </h2>
             <div className="mt-12 flex flex-col gap-4">
-              <form>
+              <form action={signInAction}>
                 <GetStartedButton />
               </form>
               <div className="w-fit items-center">

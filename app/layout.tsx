@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Noto_Sans_Georgian } from "next/font/google";
 import "./globals.css";
 
-import { ConvexClientProvider } from "./ConvexClientProvider";
 import { Toaster } from "@/components/ui/sonner";
 
 const defaultFont = Noto_Sans_Georgian({ subsets: ["latin"] });
@@ -24,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="className={defaultFont.className} antialiased">
-        <main>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
-        </main>
+        <main>{children}</main>
         <Toaster />
       </body>
     </html>
