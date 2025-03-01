@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { Providers } from "../Providers";
+import { Providers } from "../providers";
 
 export default async function LoggedInLayout({
   children,
